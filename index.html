@@ -1,0 +1,139 @@
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Cinexia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Transiciones */
+    .btn-hover {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn-hover:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+ </head>
+ <body class="bg-[#f7f9fc] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12">
+  <div class="max-w-md w-full text-center">
+   <!-- Imagen con tamaño responsivo -->
+   <img 
+     alt="Logo de Cinexia" 
+     class="mx-auto rounded-3xl shadow-lg w-40 sm:w-56 md:w-64 lg:w-72" 
+     src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaCa4LplwKz_AIYt-uD1pWMJ5DnDUKFbqTG3YI-9Iri3dtvKCDjWi2fNn8Jb9B6Uoqx75YDgEkIvF-M6nSZlkAStTmeo8cS_fZV8LmTN8azP4x0rLKlHNJOBUoI177xwixTeCtF_-cnsCrCLJG8n1QWDlzsOfr8MTuJh1yqQKieyIwqS3j70mrrIWG5w/s1024/Imagen%20de%20WhatsApp%202025-08-25%20a%20las%2008.47.21_2cb08216.jpg"/>
+   
+   <h1 class="mt-6 sm:mt-8 text-2xl sm:text-3xl font-extrabold text-gray-800">
+    CINEXIA
+   </h1>
+   <p class="mt-2 text-gray-600 text-sm sm:text-base">
+    Cinexia, la aplicación sucesora de LzPlay!
+   </p>
+   <p class="mt-3 text-gray-600 text-sm sm:text-base leading-relaxed px-2">
+    Cinexia fue creada para quienes buscan calidad y contenido gratuito. Aunque nuestro catálogo es limitado por ahora, pronto se añadirán más opciones. Este proyecto sigue la esencia de LzPlay, ¡gracias por tu apoyo y paciencia!
+   </p>
+   
+   <!-- Botón descargar -->
+<a href="https://github.com/lzrdrz10/Cinexia.V.9.0/releases/download/Cinexia-V.9.0/Cinexia-V9.0.apk" 
+   class="mt-6 w-full bg-[#0a7fff] hover:bg-[#0a7fffcc] text-white font-extrabold text-lg rounded-full py-3 shadow-[0_0_15px_rgba(10,127,255,0.4)] flex items-center justify-center gap-2 btn-hover"
+   download>
+   <span class="text-xl">⬇</span>
+   Descargar App
+</a>
+
+   <p class="mt-4 text-gray-500 text-sm">
+    ¡Apóyanos!
+   </p>
+   
+   <!-- Donaciones -->
+   <div class="mt-3 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
+    <a class="text-blue-700 underline text-sm sm:text-base hover:text-blue-800 transition-colors" href="https://paypal.me/LzRdrgz">
+      Donar via PayPal
+    </a>
+    <a class="text-blue-700 underline text-sm sm:text-base hover:text-blue-800 transition-colors" href="https://ko-fi.com/lzplay_oficial">
+      Donar via Ko-Fi
+    </a>
+   </div>
+   
+   <!-- Botón compartir -->
+   <div class="mt-6 flex justify-center gap-3">
+    <button id="shareButton" class="flex items-center gap-2 bg-[#1877f2] hover:bg-[#1877f2cc] text-white font-semibold text-sm rounded px-4 py-2 btn-hover" type="button">
+      <i class="fas fa-share"></i>
+      Compartir
+    </button>
+   </div>
+  </div>
+  
+<!-- Modal (oculto por defecto) -->
+<div id="supportModal" 
+     class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+     onclick="closeModal(event)">
+  
+  <!-- Contenedor del modal -->
+  <div class="bg-white text-gray-800 rounded-2xl shadow-xl p-6 w-80 relative"
+       onclick="event.stopPropagation()">
+    
+    <!-- Botón cerrar -->
+    <button onclick="closeModal()" 
+            class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
+      ✖
+    </button>
+    
+    <!-- Contenido -->
+    <h2 class="text-lg font-bold text-center mb-4">
+      🙌 Si te gusta la APK, ayúdame con tu apoyo para seguir creciendo este proyecto
+    </h2>
+
+    <div class="space-y-3">
+      <a href="https://paypal.me/LzRdrgz" target="_blank" 
+         class="block bg-[#0070ba] text-white text-center font-semibold py-2 rounded-lg shadow hover:bg-[#005c99]">
+        💳 Apoyar en PayPal
+      </a>
+      <a href="https://ko-fi.com/lzplay_oficial" target="_blank" 
+         class="block bg-[#29abe0] text-white text-center font-semibold py-2 rounded-lg shadow hover:bg-[#238bbd]">
+        ☕ Invítame un café en Ko-fi
+      </a>
+    </div>
+  </div>
+</div>
+
+  <script>
+    document.getElementById('shareButton').addEventListener('click', async () => {
+      const shareData = {
+        title: 'Cinexia - La nueva app de streaming',
+        text: 'Descubre Cinexia, la app sucesora de LzPlay con contenido gratuito y de calidad. ¡Descárgala ahora!',
+        url: window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          const shareText = `${shareData.title}\n${shareData.text}\n${shareData.url}`;
+          await navigator.clipboard.writeText(shareText);
+          alert('¡Enlace copiado al portapapeles! Pégalo en tu app favorita.');
+        }
+      } catch (err) {
+        console.error('Error al compartir:', err);
+        alert('Hubo un error al compartir. Copia el enlace manualmente.');
+      }
+    });
+	
+	function openModal() {
+  document.getElementById("supportModal").classList.remove("hidden");
+}
+function closeModal() {
+  document.getElementById("supportModal").classList.add("hidden");
+}
+
+// Abrir modal automáticamente al cargar la página
+window.onload = function() {
+  openModal();
+};
+  </script>
+ </body>
+</html>
