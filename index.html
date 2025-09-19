@@ -1,139 +1,191 @@
+<!DOCTYPE html>
 <html lang="es">
- <head>
+<head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>LZPLAY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>DOWNLOAD - LZ</title>
+
+  <!-- Tailwind + FontAwesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2468/2468825.png" type="image/png"/>
+
   <style>
-   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    /* Transiciones */
-    .btn-hover {
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .btn-hover:hover {
-      transform: translateY(-2px);
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .btn-hover { transition: background-color 0.3s ease, transform 0.2s ease; }
+    .btn-hover:hover { transform: translateY(-2px); }
   </style>
- </head>
- <body class="bg-[#f7f9fc] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12">
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9JETB0VP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PC9JETB0VP');
+</script>
+</head>
+<body class="bg-[#f7f9fc] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12">
   <div class="max-w-md w-full text-center">
-   <!-- Imagen con tamaño responsivo -->
-   <img 
-     alt="Logo de LzPlay" 
-     class="mx-auto rounded-3xl shadow-lg w-40 sm:w-56 md:w-64 lg:w-72" 
-     src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinLOZxc2owdDYorkfqLhG_RYF4SJ6SzpqaxeKIXh-oWMd10SIYY7wbLP9B0Sg2C8S8HHh4bqfmjEUzpMNR2TX_pMCmhLrDG1AP7UYyG29FrrSIJh4cmaA7lW8Ws9Ky2in9wBtax7H4WA8rOm26CSuhgMnP6E3QE5OeFS1rknZqKQCym2rcVSbnYIyzrLg/s1290/Imagen%20de%20WhatsApp%202025-08-27%20a%20las%2011.30.04_0601b9e6.jpg"/>
+    <!-- Logo -->
+    <img 
+      alt="Logo de LzPlay" 
+      class="mx-auto rounded-3xl shadow-lg w-40 sm:w-56 md:w-64 lg:w-72" 
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinLOZxc2owdDYorkfqLhG_RYF4SJ6SzpqaxeKIXh-oWMd10SIYY7wbLP9B0Sg2C8S8HHh4bqfmjEUzpMNR2TX_pMCmhLrDG1AP7UYyG29FrrSIJh4cmaA7lW8Ws9Ky2in9wBtax7H4WA8rOm26CSuhgMnP6E3QE5OeFS1rknZqKQCym2rcVSbnYIyzrLg/s1290/Imagen%20de%20WhatsApp%202025-08-27%20a%20las%2011.30.04_0601b9e6.jpg"/>
+
+    <h1 class="mt-6 text-3xl font-extrabold text-gray-800">LzPlay</h1>
+    <p class="mt-2 text-gray-600 text-base">Tu mejor opción si quieres 0 anuncios, solo en LzPlay!</p>
+    <p class="mt-3 text-gray-600 text-sm leading-relaxed px-2">
+      LzPlay fue creada para quienes buscan calidad y contenido gratuito. Aunque nuestro catálogo es limitado por ahora, pronto se añadirán más opciones. ¡Gracias por tu apoyo y paciencia!
+    </p>
+
    
-   <h1 class="mt-6 sm:mt-8 text-2xl sm:text-3xl font-extrabold text-gray-800">
-    LzPlay
-   </h1>
-   <p class="mt-2 text-gray-600 text-sm sm:text-base">
-   Tu mejor opcion si quieres 0 anuncios, solo en  LzPlay!
-   </p>
-   <p class="mt-3 text-gray-600 text-sm sm:text-base leading-relaxed px-2">
-    LzPlay fue creada para quienes buscan calidad y contenido gratuito. Aunque nuestro catálogo es limitado por ahora, pronto se añadirán más opciones. Este proyecto sigue apesar del baneo que nos hicieron, ¡gracias por tu apoyo y paciencia!
-   </p>
-   
-   <!-- Botón descargar -->
-<a href="https://github.com/lzrdrz10/dw/releases/download/LZPLAY-OFICIAL/LzPlay.v.1.1.3.apk" 
-   class="mt-6 w-full bg-[#0a7fff] hover:bg-[#0a7fffcc] text-white font-extrabold text-lg rounded-full py-3 shadow-[0_0_15px_rgba(10,127,255,0.4)] flex items-center justify-center gap-2 btn-hover"
-   download>
-   <span class="text-xl">⬇</span>
-   Descargar App
+<!-- Reemplaza el botón de descarga de Android actual -->
+<a id="downloadAndroidBtn" href="https://github.com/lzrdrz10/dw/releases/download/LZPLAY-OFICIAL/LzPlay.v.1.1.3.apk"
+   download="LzPlay.v.1.1.3.apk"
+   class="mt-6 w-full bg-[#0a7fff] hover:bg-[#0a7fffcc] text-white font-extrabold text-lg rounded-full py-3 shadow-[0_0_15px_rgba(10,127,255,0.4)] flex items-center justify-center gap-2 btn-hover">
+  <img src="https://cdn.freebiesupply.com/logos/large/2x/android-logo-png-transparent.png" class="w-6 h-6" alt="Android"/>
+  Descargar Aplicación Android
 </a>
 
-   <p class="mt-4 text-gray-500 text-sm">
-    ¡Apóyanos!
-   </p>
-   
-   <!-- Donaciones -->
-   <div class="mt-3 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
-    <a class="text-blue-700 underline text-sm sm:text-base hover:text-blue-800 transition-colors" href="https://paypal.me/LzRdrgz">
-      Donar via PayPal
-    </a>
-    <a class="text-blue-700 underline text-sm sm:text-base hover:text-blue-800 transition-colors" href="https://ko-fi.com/lzplay_oficial">
-      Donar via Ko-Fi
-    </a>
-   </div>
-   
-   <!-- Botón compartir -->
-   <div class="mt-6 flex justify-center gap-3">
-    <button id="shareButton" class="flex items-center gap-2 bg-[#1877f2] hover:bg-[#1877f2cc] text-white font-semibold text-sm rounded px-4 py-2 btn-hover" type="button">
-      <i class="fas fa-share"></i>
-      Compartir
+    <!-- Botón descargar iOS -->
+    <button onclick="openIphoneModal()"
+       class="mt-4 w-full bg-[#222] hover:bg-[#444] text-white font-extrabold text-lg rounded-full py-3 shadow flex items-center justify-center gap-2 btn-hover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-6 h-6" alt="iPhone"/>
+      Descargar iOS
     </button>
-   </div>
-  </div>
-  
-<!-- Modal (oculto por defecto) -->
-<div id="supportModal" 
-     class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
-     onclick="closeModal(event)">
-  
-  <!-- Contenedor del modal -->
-  <div class="bg-white text-gray-800 rounded-2xl shadow-xl p-6 w-80 relative"
-       onclick="event.stopPropagation()">
-    
-    <!-- Botón cerrar -->
-    <button onclick="closeModal()" 
-            class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
-      ✖
-    </button>
-    
-    <!-- Contenido -->
-    <h2 class="text-lg font-bold text-center mb-4">
-      🙌 Si te gusta la APK, ayúdame con tu apoyo para seguir creciendo este proyecto
-    </h2>
 
-    <div class="space-y-3">
-      <a href="https://paypal.me/LzRdrgz" target="_blank" 
-         class="block bg-[#0070ba] text-white text-center font-semibold py-2 rounded-lg shadow hover:bg-[#005c99]">
-        💳 Apoyar en PayPal
-      </a>
-      <a href="https://ko-fi.com/lzplay_oficial" target="_blank" 
-         class="block bg-[#29abe0] text-white text-center font-semibold py-2 rounded-lg shadow hover:bg-[#238bbd]">
-        ☕ Invítame un café en Ko-fi
-      </a>
+    <!-- Donaciones -->
+    <p class="mt-4 text-gray-500 text-sm">¡Apóyanos!</p>
+    <div class="mt-3 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
+      <a class="text-blue-700 underline text-sm hover:text-blue-800" href="https://paypal.me/LzRdrgz">Donar vía PayPal</a>
+      <a class="text-blue-700 underline text-sm hover:text-blue-800" href="https://ko-fi.com/lzplay_oficial">Donar vía Ko-Fi</a>
+    </div>
+
+    <!-- Botón compartir -->
+    <div class="mt-6 flex justify-center gap-3">
+      <button id="shareButton" class="flex items-center gap-2 bg-[#1877f2] hover:bg-[#1877f2cc] text-white font-semibold text-sm rounded px-4 py-2 btn-hover" type="button">
+        <i class="fas fa-share"></i> Compartir
+      </button>
     </div>
   </div>
+
+  <!-- Modal iPhone -->
+  <div id="iphoneModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50" onclick="closeIphoneModal(event)">
+    <div class="bg-white text-gray-800 rounded-2xl shadow-xl p-6 w-96 max-h-[90vh] overflow-y-auto relative" onclick="event.stopPropagation()">
+      <button onclick="closeIphoneModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">✖</button>
+      <h2 class="text-lg font-bold text-center mb-4">📱 Instalación en iPhone</h2>
+      <ol class="list-decimal list-inside space-y-3 text-sm text-gray-700">
+        <li>
+  Abre esta página en Safari en tu iPhone. 
+</li>
+<a href="https://githuapp.github.io/de/" target="_blank" style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+" onmouseover="this.style.backgroundColor='#FFC200'" onmouseout="this.style.backgroundColor='#FFD700'">
+  Abrir enlace
+</a>
+
+		<li>Toca el botón <b>Compartir</b> (cuadro con flecha hacia arriba).</li>
+		<div class="mt-4 space-y-2">
+<img class="w-full rounded-lg shadow" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEib_6vaHxol-WKyYWMzdZY0w891WC9-OTxyIahjb4AxNNR3jnPvtpL5udsnDtpcdpkCnzl7PW6GJlGmQJapTZMCMM3EVFswK54TbFVgG0sHpF9cbXhg2rL9zgSYZudLiFWoJjGdlySYuHTucImJzn8yG95YT-T-OsQUfxyDZp-SPiPIitCVtyMdidjYog/s320/WhatsApp%20Image%202025-09-19%20at%203.30.02%20AM.jpeg" alt="Paso 1"/>
 </div>
+        <li>Selecciona <b>"Añadir a la pantalla de inicio"</b>.</li>
+		 <div class="mt-4 space-y-2">
+        <img class="w-full rounded-lg shadow" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF2aZcADqi7Pg3Qj1FyxqZ_sKZUEHi-_hvQbMbv3HLZ9QEGLcxyDT1vcTXr7pHX5tXsO51EE9WfltX-TXHWOG0bMOnmVbnyUQgJvVQb47Dh9D_QzW5KJa1olHRavIAOn_DZ28yC-BjrWoAuMGrG8g3sEldsWVky3B1X6QxR7rBpzYNHujNlg5b2G96Lw/s320/WhatsApp%20Image%202025-09-19%20at%203.30.02%20AM%20%281%29.jpeg" alt="Paso 2"/>
+        </div>
+        <li>Confirma con <b>Añadir</b>.</li>
+      </ol>
+      <div class="mt-4 space-y-2">
+       <img class="w-full rounded-lg shadow" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGgBy3W0bMsdQMdmWazE-3bPUBsSlU1zAiGRQ2sJYQqoUN819zutDnxKEzNPkKqLh8-war4DgomCi2e1zklUTm_qeUEmCqlNtV0KI4Z0sxVz7ljyddXu3kIt-Hl_mIA5ULuCkN6634VpBSig666dFqPYftbe0WusnoV8apgEAE28sOiLA1faixymwAdA/s320/WhatsApp%20Image%202025-09-19%20at%203.30.02%20AM%20%282%29.jpeg" alt="Paso 3"/>
+      </div>
+	   <li><b>LISTO!</b>.</li>
+	  <div class="mt-4 space-y-2">
+       <img class="w-full rounded-lg shadow" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_DRHZo0lxbu8AxxhDJNeKpbrSwZxE7aTeK4VVasl7VCAU67fw3bKznNl6jP_PHvNNBHSaaRZjUkzD6j1TcNmg8I8AwiYdL3_fMA_0_4C6M3tsW62P_ShK7QVXyhK2VTtsEzwN0JwhnlRFMzVj-jeggEjv_4XnNBE2x-UORL0NEaxrhhNjR716iGh8IA/s1280/WhatsApp%20Image%202025-09-19%20at%203.30.02%20AM%20%283%29.jpeg" alt="Paso 4"/>
+      </div>
+      
+    </div>
+  </div>
 
   <script>
+    // Compartir
     document.getElementById('shareButton').addEventListener('click', async () => {
       const shareData = {
-        title: 'Cinexia - La nueva app de streaming',
-        text: 'Descubre Cinexia, la app sucesora de LzPlay con contenido gratuito y de calidad. ¡Descárgala ahora!',
+        title: 'LzPlay - La app sin anuncios',
+        text: 'Descarga LzPlay, la app gratuita y sin anuncios. ¡Calidad y simplicidad en un solo lugar!',
         url: window.location.href
       };
-
       try {
         if (navigator.share) {
           await navigator.share(shareData);
         } else {
           const shareText = `${shareData.title}\n${shareData.text}\n${shareData.url}`;
           await navigator.clipboard.writeText(shareText);
-          alert('¡Enlace copiado al portapapeles! Pégalo en tu app favorita.');
+          alert('¡Enlace copiado al portapapeles!');
         }
       } catch (err) {
-        console.error('Error al compartir:', err);
-        alert('Hubo un error al compartir. Copia el enlace manualmente.');
+        alert('Hubo un error al compartir.');
       }
     });
-	
-	function openModal() {
-  document.getElementById("supportModal").classList.remove("hidden");
-}
-function closeModal() {
-  document.getElementById("supportModal").classList.add("hidden");
-}
 
-// Abrir modal automáticamente al cargar la página
-window.onload = function() {
-  openModal();
-};
+    // Modal iPhone
+    function openIphoneModal() {
+      document.getElementById("iphoneModal").classList.remove("hidden");
+    }
+    function closeIphoneModal() {
+      document.getElementById("iphoneModal").classList.add("hidden");
+    }
+	
+	  // Modal Android
+  function openAndroidModal() {
+    document.getElementById("androidModal").classList.remove("hidden");
+  }
+  function closeAndroidModal() {
+    document.getElementById("androidModal").classList.add("hidden");
+  }
+
+  // Intentar abrir el APK (esto puede no funcionar en todos los navegadores)
+  function tryOpenApk() {
+    const apkUrl = "file:///storage/emulated/0/Download/LzPlay.v.1.1.3.apk";
+    window.open(apkUrl, '_blank');
+    alert('Si no se abrió, busca "LzPlay.v.1.1.3.apk" en tu carpeta de Descargas y tócalo para instalar.');
+  }
+
+  // Detectar clic en el botón de descarga
+  document.getElementById('downloadAndroidBtn').addEventListener('click', () => {
+    setTimeout(() => {
+      openAndroidModal();
+    }, 1000); // Muestra el modal 1 segundo después de iniciar la descarga
+  });
   </script>
- </body>
+  <!-- Dentro de <body>, justo después del modal de iPhone -->
+<!-- Modal para Android -->
+<div id="androidModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50" onclick="closeAndroidModal(event)">
+  <div class="bg-white text-gray-800 rounded-2xl shadow-xl p-6 w-96 max-h-[90vh] overflow-y-auto relative" onclick="event.stopPropagation()">
+    <button onclick="closeAndroidModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">✖</button>
+    <h2 class="text-lg font-bold text-center mb-4">📱 Instalación en Android</h2>
+    <p class="text-sm text-gray-700 mb-4">¡Tu descarga ha comenzado! Sigue estos pasos para instalar LzPlay:</p>
+    <ol class="list-decimal list-inside space-y-3 text-sm text-gray-700">
+      <li>Espera a que el archivo <b>LzPlay.v.1.1.3.apk</b> se descargue (mira la barra de notificaciones).</li>
+      <li>Abre la app <b>Archivos</b> o revisa la carpeta <b>Descargas</b>.</li>
+      <li>Toca el archivo <b>LzPlay.v.1.1.3.apk</b> y selecciona <b>Instalar</b>.</li>
+      <li>Si se solicita, permite la instalación desde <b>fuentes desconocidas</b> en tu navegador (Ajustes > Aplicaciones > Acceso especial).</li>
+    </ol>
+    
+    <button onclick="tryOpenApk()" class="mt-5 block w-full bg-[#0a7fff] text-white font-semibold text-center py-2 rounded-lg shadow hover:bg-[#0a7fffcc]">
+      Intentar abrir APK ahora
+    </button>
+  </div>
+</div>
+
+</body>
 </html>
